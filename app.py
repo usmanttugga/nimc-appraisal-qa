@@ -325,6 +325,26 @@ def main():
         details, details[open], details > div, details[open] > div {
             background-color: #1E293B !important;
         }
+        .app-header {
+            padding: 0.2rem 0.5rem 0.1rem !important;
+        }
+        .app-header img {
+            width: 35px !important;
+            margin-bottom: 0.1rem !important;
+        }
+        .app-header h1 {
+            font-size: 1.2rem !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        .app-header p {
+            font-size: 0.8rem !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        .block-container {
+            padding-top: 0.1rem !important;
+        }
     }
     </style>
     """, unsafe_allow_html=True)
