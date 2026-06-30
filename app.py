@@ -58,18 +58,19 @@ def main():
     .stApp > header { background-color: #0B0F19 !important; }
     .main .block-container {
         background-color: #0B0F19 !important;
-        padding-top: 0.5rem !important;
+        padding-top: 0.2rem !important;
+        padding-bottom: 0rem !important;
     }
 
     /* Header */
     .app-header {
         text-align: center;
-        padding: 1rem 1rem 0.5rem;
+        padding: 0.5rem 1rem 0.2rem;
     }
     .app-header img {
-        width: 50px;
+        width: 45px;
         height: auto;
-        margin-bottom: 0.3rem;
+        margin-bottom: 0.2rem;
         filter: drop-shadow(0 0 12px rgba(99, 102, 241, 0.5));
         animation: pulse-glow 2s ease-in-out infinite;
     }
@@ -79,15 +80,19 @@ def main():
     }
     .app-header h1 {
         color: #E2E8F0;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         font-weight: 700;
-        margin: 0 0 0.2rem;
+        margin: 0;
+        padding: 0;
         letter-spacing: -0.02em;
+        line-height: 1.2;
     }
     .app-header p {
         color: #94A3B8;
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         margin: 0;
+        padding: 0;
+        line-height: 1.2;
     }
 
     /* Text area - Deep Slate */
@@ -326,7 +331,7 @@ def main():
 
     st.markdown(f"""
     <div class="app-header">
-        <img src="data:image/png;base64,{logo_b64}" alt="Logo" style="width: 50px; height: auto; margin-bottom: 0.6rem; filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.4));">
+        <img src="data:image/png;base64,{logo_b64}" alt="Logo">
         <h1>NIN Data Protection MCQ Practice</h1>
         <p>Paste a question to find the correct answer</p>
     </div>
