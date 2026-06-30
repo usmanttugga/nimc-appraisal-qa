@@ -67,9 +67,9 @@ def main():
         padding: 2rem 1rem 1.5rem;
     }
     .app-header img {
-        width: 80px;
+        width: 50px;
         height: auto;
-        margin-bottom: 0.8rem;
+        margin-bottom: 0.6rem;
         filter: drop-shadow(0 0 12px rgba(99, 102, 241, 0.5));
         animation: pulse-glow 2s ease-in-out infinite;
     }
@@ -282,7 +282,7 @@ def main():
 
     st.markdown(f"""
     <div class="app-header">
-        <img src="data:image/png;base64,{logo_b64}" alt="Logo" style="width: 80px; height: auto; margin-bottom: 0.8rem; filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.4));">
+        <img src="data:image/png;base64,{logo_b64}" alt="Logo" style="width: 50px; height: auto; margin-bottom: 0.6rem; filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.4));">
         <h1>NIN Data Protection MCQ Practice</h1>
         <p>Paste a question to find the correct answer</p>
     </div>
@@ -298,7 +298,7 @@ def main():
 
     user_input = st.text_area(
         "Paste a question below:",
-        height=160,
+        height=120,
         placeholder="e.g. What is personal data? Or paste any data protection question...",
         key="user_input",
         label_visibility="collapsed"
