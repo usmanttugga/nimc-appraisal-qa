@@ -1,12 +1,18 @@
 import streamlit as st
 import json
 import re
+import base64
 from rapidfuzz import fuzz, process
 
 @st.cache_data
 def load_questions():
     with open("questions.json", "r") as f:
         return json.load(f)
+
+@st.cache_data
+def load_logo():
+    with open("logo.png", "rb") as f:
+        return base64.b64encode(f.read()).decode()
 
 def clean_text(text):
     text = re.sub(r'\s+', ' ', text).strip()
@@ -32,9 +38,11 @@ def find_best_match(user_input, questions, threshold=55):
     return None, 0
 
 def main():
+    logo_b64 = load_logo()
+
     st.set_page_config(
         page_title="Data Protection MCQ Practice",
-        page_icon="🛡️",
+        page_icon=f"data:image/png;base64,{logo_b64}",
         layout="centered"
     )
 
@@ -57,6 +65,17 @@ def main():
     .app-header {
         text-align: center;
         padding: 2rem 1rem 1.5rem;
+    }
+    .app-header img {
+        width: 80px;
+        height: auto;
+        margin-bottom: 0.8rem;
+        filter: drop-shadow(0 0 12px rgba(99, 102, 241, 0.5));
+        animation: pulse-glow 2s ease-in-out infinite;
+    }
+    @keyframes pulse-glow {
+        0%, 100% { filter: drop-shadow(0 0 12px rgba(99, 102, 241, 0.5)); }
+        50% { filter: drop-shadow(0 0 20px rgba(99, 102, 241, 0.8)); }
     }
     .app-header h1 {
         color: #E2E8F0;
@@ -261,9 +280,10 @@ def main():
     </style>
     """, unsafe_allow_html=True)
 
-    st.markdown("""
+    st.markdown(f"""
     <div class="app-header">
-        <h1>🛡️ NIN Data Protection MCQ Practice</h1>
+        <img src="data:image/png;base64,{logo_b64}" alt="Logo" style="width: 80px; height: auto; margin-bottom: 0.8rem; filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.4));">
+        <h1>NIN Data Protection MCQ Practice</h1>
         <p>Paste a question to find the correct answer</p>
     </div>
     """, unsafe_allow_html=True)
