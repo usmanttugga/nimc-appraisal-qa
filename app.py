@@ -58,7 +58,7 @@ def main():
     .stApp > header { background-color: #0B0F19 !important; }
     .main .block-container {
         background-color: #0B0F19 !important;
-        padding-top: 1.5rem !important;
+        padding-top: 3rem !important;
         padding-bottom: 0rem !important;
     }
 
@@ -340,7 +340,7 @@ def main():
             padding: 0 !important;
         }
         .block-container {
-            padding-top: 1rem !important;
+            padding-top: 2rem !important;
         }
     }
     </style>
