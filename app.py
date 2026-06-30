@@ -237,6 +237,16 @@ def main():
     .stExpander summary:hover {
         color: #6366F1 !important;
     }
+    .stExpander details[open] {
+        background-color: #1E293B !important;
+    }
+    .stExpander details[open] > div {
+        background-color: #1E293B !important;
+    }
+    .stExpander .streamlit-expanderContent {
+        background-color: #1E293B !important;
+        color: #E2E8F0 !important;
+    }
     .stTextInput label {
         color: #CBD5E1 !important;
         font-weight: 600 !important;
@@ -250,6 +260,14 @@ def main():
     .stTextInput input:focus {
         border-color: #6366F1 !important;
         box-shadow: 0 0 0 2px rgba(99,102,241,0.2) !important;
+    }
+
+    /* Streamlit expander content dark theme */
+    .stExpander [data-testid="stMarkdownContainer"] {
+        color: #E2E8F0 !important;
+    }
+    .stExpander [data-testid="stMarkdownContainer"] p {
+        color: #E2E8F0 !important;
     }
 
     /* Divider */
@@ -269,6 +287,11 @@ def main():
     h1, h2, h3, h4, h5, h6 { color: #E2E8F0 !important; }
     .stAlert > div { background-color: #1E293B !important; }
 
+    /* Force dark background on all expander content */
+    section[data-testid="stSidebar"] { background-color: #0B0F19 !important; }
+    div[data-testid="stExpander"] { background-color: #1E293B !important; }
+    div[data-testid="stExpander"] div[data-testid="stMarkdownContainer"] { color: #E2E8F0 !important; }
+
     /* Responsive - Mobile First */
     @media (max-width: 768px) {
         .app-header h1 { font-size: 1.4rem; }
@@ -276,6 +299,8 @@ def main():
         .answer-card { padding: 1.2rem; }
         .answer-text { font-size: 1rem; }
         .stTextArea textarea { padding: 0.9rem 1rem !important; font-size: 16px !important; }
+        .option-row { font-size: 0.9rem; padding: 0.5rem 0.7rem; }
+        .option-row.correct { font-size: 0.9rem; }
     }
     </style>
     """, unsafe_allow_html=True)
