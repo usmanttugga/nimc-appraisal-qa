@@ -326,24 +326,26 @@ def main():
             background-color: #1E293B !important;
         }
         .app-header {
-            padding: 0.2rem 0.5rem 0.1rem !important;
+            padding: 0.3rem 0.5rem 0.2rem !important;
         }
         .app-header img {
-            width: 35px !important;
-            margin-bottom: 0.1rem !important;
+            width: 40px !important;
+            height: auto !important;
+            display: block !important;
+            margin: 0 auto 0.15rem !important;
         }
         .app-header h1 {
-            font-size: 1.2rem !important;
+            font-size: 1.25rem !important;
             margin: 0 !important;
             padding: 0 !important;
         }
         .app-header p {
-            font-size: 0.8rem !important;
+            font-size: 0.85rem !important;
             margin: 0 !important;
             padding: 0 !important;
         }
         .block-container {
-            padding-top: 0.1rem !important;
+            padding-top: 0.15rem !important;
         }
     }
     </style>
