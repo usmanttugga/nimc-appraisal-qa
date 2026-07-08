@@ -261,7 +261,19 @@ def main():
         background-color: #0B0F19 !important;
     }
     div[data-testid="stToolbar"] {
-        background-color: #0B0F19 !important;
+        display: none !important;
+    }
+    footer {
+        display: none !important;
+    }
+    #MainMenu {
+        display: none !important;
+    }
+    [data-testid="stDecoration"] {
+        display: none !important;
+    }
+    .stAppDeployButton {
+        display: none !important;
     }
 
     /* Fix white flash on mobile taps */
