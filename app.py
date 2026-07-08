@@ -41,7 +41,7 @@ def main():
     logo_b64 = load_logo()
 
     st.set_page_config(
-        page_title="Data Protection MCQ Practice",
+        page_title="NIMC APPRAISAL Q&A",
         page_icon=f"data:image/png;base64,{logo_b64}",
         layout="centered"
     )
@@ -368,7 +368,7 @@ def main():
     st.markdown(f"""
     <div class="app-header">
         <img src="data:image/png;base64,{logo_b64}" alt="Logo" style="width:100px; height:auto; display:block; margin:0 auto 0.8rem;">
-        <h1>NIN Data Protection MCQ Practice</h1>
+        <h1>NIMC APPRAISAL Q&A</h1>
         <p>Paste a question to find the correct answer</p>
     </div>
     """, unsafe_allow_html=True)
